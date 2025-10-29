@@ -109,6 +109,16 @@ GoalTrackerApp/
 └── GoalTrackerApp.csproj         # Project file
 ```
 
+#project output:
+
+<img width="791" height="463" alt="image" src="https://github.com/user-attachments/assets/a3546f6c-e5dd-4c5d-a66f-f7fffa16464c" />
+<img width="808" height="469" alt="image" src="https://github.com/user-attachments/assets/1300fcf3-8af7-4fc9-b129-a9e9990d4113" />
+<img width="810" height="487" alt="image" src="https://github.com/user-attachments/assets/46cdfe5c-c30e-47aa-adf3-c7287ca3a7f7" />
+<img width="791" height="476" alt="image" src="https://github.com/user-attachments/assets/06b1390d-bdf3-488f-93c6-afa7cf9bed83" />
+<img width="798" height="276" alt="image" src="https://github.com/user-attachments/assets/5b05c6f8-3fb0-4ce8-9bf7-1ba4c1cea3fd" />
+<img width="805" height="486" alt="image" src="https://github.com/user-attachments/assets/7eb51a92-1b9a-48b5-ba80-de1e31bfb3ee" />
+
+
 ## 🎯 Usage Guide
 
 ### Creating a New Goal
