@@ -261,7 +261,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For questions or support regarding this project:
 - Create an issue in the GitHub repository
-- Contact: [your-email@example.com]
+- Contact: [23amtics292@gmail.com]
 
 ---
 
