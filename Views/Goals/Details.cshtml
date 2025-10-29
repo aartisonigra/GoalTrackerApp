@@ -1,0 +1,23 @@
+@model GoalTrackerApp.Models.Goal
+@{
+    ViewBag.Title = "Goal Details";
+}
+<h2>Goal Details</h2>
+<table class="table table-bordered">
+    <tr><th>Title</th><td>@Model.Title</td></tr>
+    <tr><th>Description</th><td>@Model.Description</td></tr>
+    <tr><th>Type</th><td>@Model.Type</td></tr>
+    <tr><th>Target Date</th><td>@Model.TargetDate.ToShortDateString()</td></tr>
+    <tr><th>Progress (%)</th>
+        <td>@Model.ProgressPercent%
+            @if(Model.Status == GoalTrackerApp.Models.GoalStatus.Completed) {
+                <span class="badge bg-success">Completed</span>
+            }
+        </td>
+    </tr>
+    <tr><th>Status</th><td>@Model.Status</td></tr>
+    <tr><th>Created</th><td>@Model.CreatedDate.ToString("g")</td></tr>
+</table>
+<a href="/Goals/Edit/@Model.Id" class="btn btn-warning">Edit</a>
+<a href="/Goals/Delete/@Model.Id" class="btn btn-danger">Delete</a>
+<a href="/Goals" class="btn btn-secondary">Back to List</a>

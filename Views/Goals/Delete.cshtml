@@ -1,0 +1,11 @@
+@model GoalTrackerApp.Models.Goal
+@{
+    ViewBag.Title = "Delete Goal";
+}
+<h2>Delete Goal</h2>
+<p>Are you sure you want to delete <strong>@Model.Title</strong>?</p>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="/Goals" class="btn btn-secondary">Cancel</a>
+</form>

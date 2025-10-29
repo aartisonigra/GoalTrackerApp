@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hTd5BY1Zn3s=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\omnibook\\GoalTrackerApp\\GoalTrackerApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\omnibook\\.nuget\\packages\\bootstrap\\5.3.8\\bootstrap.5.3.8.nupkg.sha512"
+  ],
+  "logs": []
+}

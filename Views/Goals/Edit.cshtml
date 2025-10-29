@@ -1,0 +1,48 @@
+@model GoalTrackerApp.Models.Goal
+@{
+    ViewBag.Title = "Edit Goal";
+}
+<h2>Edit Goal</h2>
+<form asp-action="Edit" method="post" class="needs-validation" novalidate>
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" required maxlength="100" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea asp-for="Description" class="form-control" maxlength="500"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Type</label>
+        <select asp-for="Type" class="form-control" required>
+            <option value="ShortTerm">Short Term</option>
+            <option value="LongTerm">Long Term</option>
+        </select>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Target Date</label>
+        <input asp-for="TargetDate" type="date" class="form-control" required />
+        <span asp-validation-for="TargetDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Progress (%)</label>
+        <input asp-for="ProgressPercent" type="number" min="0" max="100" class="form-control" />
+        <span asp-validation-for="ProgressPercent" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Status</label>
+        <select asp-for="Status" class="form-control">
+            <option value="Active">Active</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Update</button>
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

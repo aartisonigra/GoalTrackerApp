@@ -1,0 +1,58 @@
+@model GoalTrackerApp.Models.Goal
+@{
+    ViewBag.Title = "Create Goal";
+}
+
+<div class="page-header">
+    <h2><i class="fas fa-plus-circle"></i> Create New Goal</h2>
+</div>
+
+<div class="goal-card">
+    <form asp-action="Create" method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label><i class="fas fa-heading"></i> Title *</label>
+            <input asp-for="Title" class="form-control" placeholder="Enter goal title" required maxlength="100" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label><i class="fas fa-align-left"></i> Description</label>
+            <textarea asp-for="Description" class="form-control" placeholder="Describe your goal..." maxlength="500"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label><i class="fas fa-tag"></i> Goal Type *</label>
+                    <select asp-for="Type" class="form-select" required>
+                        <option value="ShortTerm">Short Term</option>
+                        <option value="LongTerm">Long Term</option>
+                    </select>
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label><i class="fas fa-calendar-alt"></i> Target Date *</label>
+                    <input asp-for="TargetDate" type="date" class="form-control" required />
+                    <span asp-validation-for="TargetDate" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="action-buttons mt-4">
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Save Goal
+            </button>
+            <a href="/Goals" class="btn btn-secondary">
+                <i class="fas fa-times"></i> Cancel
+            </a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
